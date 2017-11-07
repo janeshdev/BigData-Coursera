@@ -28,4 +28,5 @@ def count_invalid(element):
     except:
         invalid.add(1)
 
-1 and 4 wrong (for 1 I got 0.5/1 and for 4 I got 0.75/1) (Edited by janesh 2017-11-07)
+1 and 4 wrong (for 1 I got 0.5/1 and for 4 I got 0.75/1) (Edited by janesh 2017-11-07) 
+88% obtained
