@@ -1,5 +1,7 @@
 1.Check all true statements about the Directed Acyclic Graph 
-skipped
+The DAG is managed by the cluster manager
+If a partition is lost, the DAG is traversed forward to check what other steps are affected
+A DAG is used to track dependencies of each partition of each RDD
 
 2. Why is building a DAG necessary in Spark but not in MapReduce?
 Because MapReduce always has the same type of workflow, Spark needs to accommodate diverse workflows.
@@ -11,6 +13,7 @@ A transformation is lazy, an action instead executes immediately.
 4.Generally, which are good stages to mark a RDD for caching in memory?
 After data cleaning, parsing and validation.
 At the start of an iterative algorithm.
+The first RDD, just after reading from disk, so we avoid reading from disk again.
 
 
 5.What are good cases for using a broadcast variable? Mark all that apply
@@ -25,4 +28,4 @@ def count_invalid(element):
     except:
         invalid.add(1)
 
-1 and 4 wrong
+1 and 4 wrong (for 1 I got 0.5/1 and for 4 I got 0.75/1) (Edited by janesh 2017-11-07)
